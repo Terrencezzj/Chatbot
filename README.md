@@ -1,0 +1,1 @@
+Can be used to get information of the price, turnover, capitalization of stocks.
