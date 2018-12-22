@@ -86,6 +86,11 @@
         "entities": []
       },
       {
+        "text": "name?",
+        "intent": "name",
+        "entities": []
+      },
+      {
         "text": "i'm looking for ",
         "intent": "stock_search",
         "entities": []
