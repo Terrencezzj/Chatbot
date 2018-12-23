@@ -359,6 +359,8 @@ def send_message(state, pending, message):
     # Calculate the new_state, response, and pending_state
     new_state, response, pending_state = policy_rules[(state, intent)]
     res += "{}\n".format(response)
+    if state == CHOOSE_QUIT and intent == 'negative':
+        stocks = []
     print(21, new_state, response, pending_state)
 
     # Pending state transitions
@@ -430,7 +432,7 @@ def reply_self(msg):
     print(0)
     if msg.type != 'Text':
         print(1)
-        response = "[奸笑][奸笑]I don't understand images"
+        response = "I don't understand images"
     elif msg.text == 'quit':
         response = " Bye!"
         state = INIT
